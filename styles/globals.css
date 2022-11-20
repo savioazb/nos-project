@@ -1,26 +1,65 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.animation-fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 3s;
+    
 }
 
-* {
-  box-sizing: border-box;
+.animation-delay-fadeInLeft {
+    animation-name: fadeInLeft;
+    animation-duration: 3s;
+    
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.animation-delay-fadeInTop {
+    animation: 3s ease 0s normal forwards 1 fadeInTop;
+}
+
+@keyframes fadeInLeft {
+    0% { 
+      opacity: 0;
+      transform: translateX(-10px);
+   }
+   100% { 
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+   }
+   50% {
+    opacity: 0;
+    transform: translateY(-20px);
+ }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.swiper-pagination-bullet-active {
+    background-image: url(../public/images/logo-bola.svg) !important;
+    background-color: black !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: black !important;
+    width: 15px !important;
+    height: 15px !important;
 }
