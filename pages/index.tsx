@@ -1,7 +1,50 @@
+import { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { GraphQLClient, gql } from 'graphql-request'
 import Head from 'next/head'
 import { MainSlider } from '../components/MainSlider'
+import { NewsSlider } from '../components/NewsSlider'
 
-export default function Home() {
+export interface NewsPosts{
+  id: string,
+  titulo: string,
+  slug: string,
+  dataPublicacao: string,
+  conteudo:{
+    html:string
+  }
+  imagemFundo: {
+      url: string
+  },
+}
+
+export interface PostsData{
+  posts: NewsPosts[] 
+}
+
+type PageProps = InferGetStaticPropsType<typeof getStaticProps>
+
+const graphcms = new GraphQLClient('https://api-sa-east-1.hygraph.com/v2/clas4yzfh7wpt01t7c71vcs7p/master')
+
+const QUERY = gql`
+  {
+    noticias {
+      id
+      titulo
+      slug
+      dataPublicacao
+      conteudo{
+        html
+      }
+      imagemFundo{
+        url
+      }
+    }
+  }
+`
+
+
+export default function Home({newsPosts}:PageProps) {
+
   return (
     <div>
       <Head>
@@ -11,8 +54,27 @@ export default function Home() {
       </Head>
       
       <MainSlider />
-      <MainSlider />
-      
+
+      <main className='max-w-[1240px] m-auto mt-10'>
+        <section className='mb-10'>
+          <h2 className='mb-5 text-2xl font-extralight uppercase'>Notícias</h2>
+          <NewsSlider posts={newsPosts} />
+        </section>
+        
+      </main>
     </div>
   )
 }
+
+export async function getStaticProps({ previewData }: GetStaticPropsContext) {
+  const data = await graphcms.request(QUERY)
+  const newsPosts = data.noticias
+
+  return {
+    props: {
+      newsPosts,
+    },
+  }
+}
+
+
