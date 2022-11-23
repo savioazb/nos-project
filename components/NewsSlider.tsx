@@ -8,10 +8,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css/effect-fade";
 
-import { PostsData } from '../pages';
 import Link from 'next/link';
 
-export function NewsSlider({posts}: PostsData) {
+import { Noticias } from '../pages';
+
+export function NewsSlider({noticias}: Noticias) {
 
     return(
         <Swiper
@@ -20,14 +21,14 @@ export function NewsSlider({posts}: PostsData) {
             spaceBetween={10}
         >
         {
-            posts.map((post)=>(
+            noticias.map((noticia)=>(
                 <SwiperSlide
-                    key={post.id}
+                    key={noticia.id}
                 >
-                    <Link href={`/noticias/${post.slug}`}>
+                    <Link href={`/noticias/${noticia.slug}`}>
                         <div className='border-2 p-2'>
-                            <img className='object-cover' src={post.imagemFundo.url} alt="" />
-                            <h2>{post.titulo}</h2>
+                            <img className='object-cover' src={noticia.imagemFundo.url} alt="" />
+                            <h2>{noticia.titulo}</h2>
                         </div>
                     </Link>
                 </SwiperSlide>
