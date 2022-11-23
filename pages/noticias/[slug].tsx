@@ -51,14 +51,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
     const slug = params!.slug
-    console.log(slug);
-    
     const data = await graphcms.request(QUERY, {slug})
-    console.log(data);
-    
     const post = data.noticia
-    console.log(post);
-    
   
     return {
       props: {

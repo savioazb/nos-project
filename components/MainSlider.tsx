@@ -30,18 +30,18 @@ export function MainSlider() {
       <SwiperSlide>
       {({ isActive }) => (
         <div 
-          className="pt-[21rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" 
+          className="pt-[18rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" 
           style={{ backgroundImage: "url('/images/nossa-missao.png')" }} 
         >
           <section className="max-w-[680px] ml-1 md:ml-40 flex flex-col">
             <div className='relative'>
               <h2 className={`${isActive ?
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px] animation-delay-fadeInLeft":
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px]"}`}
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1]  animation-delay-fadeInLeft":
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1]"}`}
               >
-                O bem-estar humano é nossa missão
+                O bem-estar humano <br /> é nossa missão
               </h2>
-              <img className={`${isActive ? "absolute bottom-0 animation-fadeInLeft " : "absolute bottom-0"}`} src="/images/slide-content-border.png" alt="" />
+              <img className={`${isActive ? "absolute top-0 h-[8.5rem] animation-fadeInLeft " : "absolute top-0 h-[8.5rem]"}`} src="/images/slide-content-border.png" alt="" />
             </div>
               
               <p 
@@ -58,16 +58,16 @@ export function MainSlider() {
 
       <SwiperSlide>
       {({ isActive }) => (
-        <div className="pt-[21rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/nossa-qualidade.png')" }} >
+        <div className="pt-[18rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/nossa-qualidade.png')" }} >
             <section className="max-w-[680px] ml-1 md:ml-40 flex flex-col">
               <div className='relative'>
               <h2 className={`${isActive ?
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px] animation-delay-fadeInLeft":
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px]"}`}
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1] animation-delay-fadeInLeft":
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1]"}`}
               > 
                 Qualidade & <br /> Inovação
               </h2>
-                <img className={`${isActive ? "absolute bottom-0 animation-fadeInLeft " : "absolute bottom-0"}`} src="/images/slide-content-border.png" alt="" />
+                <img className={`${isActive ? "absolute top-0 h-[8.5rem] animation-fadeInLeft " : "absolute top-0 h-[8.5rem]"}`} src="/images/slide-content-border.png" alt="" />
               </div>
               <p 
                 className={`${isActive ?
@@ -83,16 +83,16 @@ export function MainSlider() {
 
       <SwiperSlide>
       {({ isActive }) => (
-        <div className="pt-[21rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/nosso-respeito.png')" }} >
+        <div className="pt-[18rem] pb-[12.5rem] pl-3 pr-3 h-[100vh] bg-cover bg-center" style={{ backgroundImage: "url('/images/nosso-respeito.png')" }} >
             <section className="max-w-[680px] ml-1 md:ml-40 flex flex-col">
               <div className='relative'>
               <h2 className={`${isActive ?
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px] animation-delay-fadeInLeft":
-                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1.3rem] mb-[10px]"}`}
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1] animation-delay-fadeInLeft":
+                  "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[2rem] mb-[10px] leading-[1.1]"}`}
               > 
                 Respeito <br /> & Confiança
               </h2>
-              <img className={`${isActive ? "absolute bottom-0 animation-fadeInLeft " : "absolute bottom-0"}`} src="/images/slide-content-border.png" alt="" />
+              <img className={`${isActive ? "absolute top-0 h-[8.5rem] animation-fadeInLeft " : "absolute top-0 h-[8.5rem]"}`} src="/images/slide-content-border.png" alt="" />
               </div>
                 
               <p 

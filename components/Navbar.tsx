@@ -15,7 +15,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 10) {
         setScrolled(true)
         setColor('#ffffff');
         setMobileColor('#ffffff')
@@ -35,25 +35,26 @@ export const Navbar = () => {
       style={{ backgroundColor: `${color}` }}
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+      <div className='max-w-[1240px] m-auto flex justify-between items-center p-3 text-white'>
         <Link href='/'>
-        <img className={scrolled ? "opacity-0":"opacity-100"} src="/images/logo-menu.png" alt='NOS Logo' />                    <img className={scrolled ? "opacity-100 absolute top-[12px] " : "opacity-0 absolute top-[12px]"} src="/images/logo-menu-black.png" alt='NOS Logo' />
+        <img className={scrolled ? "w-[200px] opacity-0":"w-[200px] opacity-100"} src="/images/logo-menu.svg" alt='NOS Logo' />                    
+        <img className={scrolled ? "w-[200px] opacity-100 absolute top-[12px] " : "w-[200px] opacity-0 absolute top-[12px]"} src="/images/logo-menu-black.svg" alt='NOS Logo' />
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           <li className='p-4 uppercase'>
-            <Link href='/'>Sobre Nós</Link>
+            <Link href='/'><h3 className='text-sm'>Sobre Nós</h3></Link>
           </li>
           <li className='p-4 uppercase'>
-            <Link href='/#gallery'>Produtos</Link>
+            <Link href='/#gallery'><h3 className='text-sm'>Produtos</h3></Link>
           </li>
           <li className='p-4 uppercase'>
-            <Link href='/work'>Manutenção Instrumental</Link>
+            <Link href='/work'><h3 className='text-sm'>Manutenção Instrumental</h3></Link>
           </li>
           <li className='p-4 uppercase'>
-            <Link href='/contact'>Parceiros</Link>
+            <Link href='/contact'><h3 className='text-sm'>Parceiros</h3></Link>
           </li>
           <li className='p-4 uppercase'>
-            <Link href='/contact'>Contate-nos</Link>
+            <Link href='/contact'><h3 className='text-sm'>Contate-nos</h3></Link>
           </li>
         </ul>
 
