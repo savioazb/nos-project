@@ -26,10 +26,14 @@ export function NewsSlider({noticias}: Noticias) {
                     key={noticia.id}
                 >
                     <Link href={`/noticias/${noticia.slug}`}>
-                        <div className='border-2 p-2'>
-                            <img className='object-cover' src={noticia.imagemFundo.url} alt="" />
-                            <h2>{noticia.titulo}</h2>
-                        </div>
+                            <div className='m-4 max-w-sm overflow-hidden min-h-[288px] slide-border'>
+                                <div className='p-1'>
+                                    <img className='object-cover' src={noticia.imagemFundo.url} alt="" />
+                                </div>
+                                <div className='px-3 py-4 '>
+                                    <h2 className='text-lg font-extralight uppercase'>{noticia.titulo}</h2>
+                                </div>
+                            </div>
                     </Link>
                 </SwiperSlide>
             ))

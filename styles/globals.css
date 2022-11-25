@@ -27,6 +27,13 @@ body {
     animation: 3s ease 0s normal forwards 1 fadeInTop;
 }
 
+.slide-border {
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black
+}
+
 @keyframes fadeInLeft {
     0% { 
       opacity: 0;
@@ -63,3 +70,4 @@ body {
     width: 15px !important;
     height: 15px !important;
 }
+

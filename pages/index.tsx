@@ -56,8 +56,13 @@ export default function Home({ noticias }: Noticias) {
       <MainSlider />
 
       <main className='max-w-[1240px] m-auto mt-10'>
-        <section className='mb-10'>
+        <section className='mb-10 p-4'>
           <h2 className='mb-5 text-2xl font-extralight uppercase'>Notícias</h2>
+          <NewsSlider noticias={noticias} />
+        </section>
+
+        <section className='mb-10 p-4'>
+          <h2 className='mb-5 text-2xl font-extralight uppercase'>Prêmios</h2>
           <NewsSlider noticias={noticias} />
         </section>
         
