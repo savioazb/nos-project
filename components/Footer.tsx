@@ -38,7 +38,7 @@ export function Footer() {
                     <h3 className="absolute top-[71px] left-[-10px] origin-[0_100%] rotate-[-90deg] text-white text-xl uppercase font-bold">Produtos</h3>
                     <ul className="ml-3">
                         <li className="mb-3 text-white text-xl font-extralight">
-                            <Link href="#"><h4>Neurocirugia</h4></Link>
+                            <Link href="/produtos/neurocirurgia"><h4>Neurocirugia</h4></Link>
                         </li>
                         <li className="mb-3 text-white text-xl font-extralight">
                             <Link href="#"><h4>Coluna</h4></Link>

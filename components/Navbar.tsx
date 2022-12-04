@@ -45,7 +45,7 @@ export const Navbar = () => {
             <Link href='/'><h3 className='text-sm'>Sobre Nós</h3></Link>
           </li>
           <li className='p-4 uppercase'>
-            <Link href='/#gallery'><h3 className='text-sm'>Produtos</h3></Link>
+            <Link href='/produtos'><h3 className='text-sm'>Produtos</h3></Link>
           </li>
           <li className='p-4 uppercase'>
             <Link href='/work'><h3 className='text-sm'>Manutenção Instrumental</h3></Link>
