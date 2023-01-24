@@ -62,9 +62,6 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     const data = await graphcms.request(QUERY, {produtoSlug})
     const produto = data.produto
 
-    console.log(produto);
-    
-
     return {
         props:{
             produto

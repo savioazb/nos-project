@@ -11,6 +11,11 @@ body {
     -webkit-font-smoothing: antialiased
 }
 
+.main-footer {
+    background: url('../public/images/footer-bg.png');
+    background-size: cover;
+}
+
 .animation-fadeInLeft {
     animation-name: fadeInLeft;
     animation-duration: 3s;
@@ -62,12 +67,15 @@ body {
 
 .swiper-pagination-bullet-active {
     background-image: url(../public/images/logo-bola.svg) !important;
-    background-color: black !important;
+    
 }
 
 .swiper-pagination-bullet {
-    background-color: black !important;
+    background-color: white !important;
+    /* opacity: 1 !important; */
     width: 15px !important;
     height: 15px !important;
 }
+
+
 

@@ -2,17 +2,17 @@ import Link from "next/link";
 
 export function Footer() {
     return(
-        <footer className="p-10 bg-[#993333]">
-            <section className="flex justify-between">
-                <img className="w-[200px]" src="/images/logo-footer.svg" alt="" />
+        <footer className="main-footer p-10 bg-[#993333]">
+            <section className="flex flex-col md:flex-row justify-between gap-5">
+                <img className="w-40" src="/images/logo-footer.svg" alt="" />
                 <div className="flex flex-row gap-3">
-                    <img className="w-[50px]" src="/images/instagram.png" alt="instagram" />
-                    <img className="w-[50px]" src="/images/linkedin.png" alt="linkedin" />
-                    <img className="w-[50px]" src="/images/youtube.png" alt="youtube" />
+                    <img className="w-7 md:w-7 md:h-7" src="/images/instagram.png" alt="instagram" />
+                    <img className="w-7 md:w-7 md:h-7" src="/images/linkedin.png" alt="linkedin" />
+                    <img className="w-7 md:w-7 md:h-7" src="/images/youtube.png" alt="youtube" />
                 </div>
             </section>
 
-            <section className="p-20 flex flex-row gap-40">
+            <section className="p-20 flex justify-center flex-col md:flex-row gap-20 md:gap-40">
                 <article className="block relative border-l-2 border-white">
                     <h3 className="absolute top-[58px] left-[-10px] origin-[0_100%] rotate-[-90deg] text-white text-xl uppercase font-bold">Empresa</h3>
                     <ul className="ml-3">
@@ -93,7 +93,7 @@ export function Footer() {
             </section>
 
             <section className="text-center">
-                <small className="text-white">&copy; 2022 Grupo NOS</small>
+                <small className="text-white">&copy; 2023 Grupo NOS</small>
             </section>
         </footer>
     )
