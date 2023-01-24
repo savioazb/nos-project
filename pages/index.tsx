@@ -10,7 +10,7 @@ export interface Noticia {
   slug: string;
   dataPublicacao: string;
   conteudo: {
-    html: string;
+    text: string;
   };
   imagemFundo: {
     url: string;
@@ -35,7 +35,7 @@ const QUERY = gql`
       slug
       dataPublicacao
       conteudo {
-        html
+        text
       }
       imagemFundo {
         url

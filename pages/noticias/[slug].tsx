@@ -20,7 +20,7 @@ const QUERY = gql`
       slug
       dataPublicacao
       conteudo {
-        html
+        text
       }
       imagemFundo {
         url
@@ -38,7 +38,27 @@ const SLUGLIST = gql`
 `;
 
 export default function Artigo({ noticia }: NoticiaProps) {
-  return <h1 className="text-xl">{noticia.titulo}</h1>;
+  return (
+    <section>
+      <div className="bg-black w-100 h-24"></div>
+      <article className="bg-cyan flex justify-center p-2">
+        <h3 className="text-3xl font-light uppercase text-white">Notícias</h3>
+      </article>
+      <article className="bg-gray flex flex-col justify-center items-center p-10">
+        <h1 className="text-4xl text-white mb-8">{noticia.titulo}</h1>
+        <h3 className="text-white">Subtítulo</h3>
+      </article>
+      <section className="">
+        <article className="max-w-6xl m-auto shadow-lg p-4 mt-4 mb-4">
+          <div
+            className="bg-cover bg-center h-[50vh] mb-10"
+            style={{ backgroundImage: `url(${noticia.imagemFundo.url})` }}
+          ></div>
+          <p className="font-light">{noticia.conteudo.text}</p>
+        </article>
+      </section>
+    </section>
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
