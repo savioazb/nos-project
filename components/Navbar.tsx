@@ -56,7 +56,7 @@ export const Navbar = () => {
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
           <li className="p-4 uppercase">
-            <Link href="/">
+            <Link href="/sobreNos">
               <h3 className="text-sm">Sobre Nós</h3>
             </Link>
           </li>

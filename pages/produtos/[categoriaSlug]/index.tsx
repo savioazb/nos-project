@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { GraphQLClient, gql } from 'graphql-request'
 import { Categoria, Categorias } from '..'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export interface CategoriaProps {
   categoria: Categoria
@@ -19,6 +20,12 @@ const QUERY = gql`
         id
         subCategoriaSlug
         subCategoriaTitulo
+        imagemFundo {
+          url
+        }
+        logo {
+          url
+        }
       }
     }
   }
@@ -35,15 +42,51 @@ const SLUGLIST = gql`
 
 export default function SubCategorias({categoria}:CategoriaProps) {
   return (
-    <main className='pt-[18rem] pb-[12.5rem] pl-3 pr-3 bg-cover bg-center'>
-      <h1 className='text-xl'>{categoria.categoriaTitulo}</h1>
-      {categoria.subCategorias.map(subCategoria => (
-        <Link key={subCategoria.id} href={`${categoria.categoriaSlug}/${subCategoria.subCategoriaSlug}`}>
-          <h2>{subCategoria.subCategoriaTitulo}</h2>
-        </Link>
-      ))}
-    </main>  
-  )
+    <main className="min-h-screen">
+      <div className="bg-black w-100 h-24"></div>
+      <article className="bg-cyan flex justify-center p-2">
+        <h3 className="text-3xl font-light uppercase text-white">
+          {categoria.categoriaTitulo}
+        </h3>
+      </article>
+      <section className="flex flex-col gap-4 items-center max-w-6xl m-auto mt-4">
+        {categoria.subCategorias.map((subCategoria) => (
+          <Link
+            key={subCategoria.id}
+            href={`${categoria.categoriaSlug}/${subCategoria.subCategoriaSlug}`}
+            className="w-[100%]"
+          >
+            <div
+              style={{
+                backgroundImage: "url('/images/subcategorias-fundo.png')",
+              }}
+              className="h-fit w-100 p-8 bg-cover bg-center flex flex-col md:flex-row justify-between items-center"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-2">
+                <Image
+                  src={subCategoria.imagemFundo.url}
+                  alt=""
+                  width={150}
+                  height={300}
+                />
+                <h2 className="text-2xl uppercase font-light">
+                  {subCategoria.subCategoriaTitulo}
+                </h2>
+              </div>
+              <div>
+                <Image
+                  src={subCategoria.logo.url}
+                  alt=""
+                  width={250}
+                  height={300}
+                />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </section>
+    </main>
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
