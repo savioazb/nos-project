@@ -6,7 +6,7 @@ export function Footer() {
             <section className="flex flex-col md:flex-row justify-between gap-5">
                 <img className="w-40" src="/images/logo-footer.svg" alt="" />
                 <div className="flex flex-row gap-3">
-                    <img className="w-7 md:w-7 md:h-7" src="/images/instagram.png" alt="instagram" />
+                   <a href="https://www.google.com"><img className="w-7 md:w-7 md:h-7" src="/images/instagram.png" alt="instagram" /></a>
                     <img className="w-7 md:w-7 md:h-7" src="/images/linkedin.png" alt="linkedin" />
                     <img className="w-7 md:w-7 md:h-7" src="/images/youtube.png" alt="youtube" />
                 </div>

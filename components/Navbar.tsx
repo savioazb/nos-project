@@ -66,12 +66,12 @@ export const Navbar = () => {
             </Link>
           </li>
           <li className="p-4 uppercase">
-            <Link href="/work">
+            <Link href="/manutencaoInstrumentais">
               <h3 className="text-sm">Manutenção Instrumental</h3>
             </Link>
           </li>
           <li className="p-4 uppercase">
-            <Link href="/contact">
+            <Link href="/parceiros">
               <h3 className="text-sm">Parceiros</h3>
             </Link>
           </li>

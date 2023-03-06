@@ -19,13 +19,13 @@ body {
 .animation-fadeInLeft {
     animation-name: fadeInLeft;
     animation-duration: 3s;
-    
+
 }
 
 .animation-delay-fadeInLeft {
     animation-name: fadeInLeft;
     animation-duration: 3s;
-    
+
 }
 
 .animation-delay-fadeInTop {
@@ -40,34 +40,58 @@ body {
 }
 
 @keyframes fadeInLeft {
-    0% { 
-      opacity: 0;
-      transform: translateX(-10px);
-   }
-   100% { 
-      opacity: 1;
-      transform: translateX(0);
-   }
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes fadeInTop {
     0% {
-      opacity: 0;
-      transform: translateY(-20px);
-   }
-   50% {
-    opacity: 0;
-    transform: translateY(-20px);
- }
-   100% {
-      opacity: 1;
-      transform: translateY(0);
-   }
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .swiper-pagination-bullet-active {
     background-image: url(../public/images/logo-bola.svg) !important;
-    
+}
+
+.swiper-button-prev {
+    background-image: url(../public/images/arrow-back.svg) !important;
+    background-repeat: no-repeat;
+    left: 1px !important;
+    background-size: 12px !important;
+}
+
+.swiper-button-next {
+    background-image: url(../public/images/arrow-next.svg) !important;
+    background-repeat: no-repeat;
+    right: -14px !important;
+    background-size: 12px !important;
+}
+
+.swiper-button-prev::after {
+    content: none !important;
+}
+
+.swiper-button-next::after {
+    content: none !important;
 }
 
 .swiper-pagination-bullet {
@@ -76,6 +100,3 @@ body {
     width: 15px !important;
     height: 15px !important;
 }
-
-
-

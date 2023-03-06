@@ -19,10 +19,7 @@ export function NewsSlider({ noticias }: Noticias) {
         modules={[Pagination, Navigation]}
         slidesPerView={1}
         spaceBetween={1}
-        navigation={{
-            prevEl: '.prev',
-            nextEl: '.next',
-        }}
+        navigation={true}
         breakpoints={{
             640: {
             slidesPerView: 2,
@@ -56,8 +53,6 @@ export function NewsSlider({ noticias }: Noticias) {
             </SwiperSlide>
         ))}
         </Swiper>
-        <div className="prev bg-slate-600 w-3 h-4 absolute left-[0px] top-[50%] cursor-pointer" />
-        <div className="next bg-green-600 w-3 h-4 absolute right-[0px] top-[50%] cursor-pointer" />
     </div>
   );
 }
