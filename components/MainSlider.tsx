@@ -42,11 +42,7 @@ export function MainSlider() {
             <section className="max-w-[680px] ml-1 md:ml-40 flex flex-col">
               <div className="relative">
                 <h2
-                  className={`${
-                    isActive
-                      ? "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1rem] sm:ml-[2rem] mb-[1rem] sm:mb-[1.5rem] leading-[1.1]  animation-delay-fadeInLeft"
-                      : "text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1rem] sm:ml-[2rem] mb-[1rem] sm:mb-[1.5rem] leading-[1.1]"
-                  }`}
+                  className={`text-white text-[2rem] md:text-[3rem] font-extralight uppercase ml-[1rem] sm:ml-[2rem] mb-[1rem] sm:mb-[1.5rem] leading-[1.1] ${isActive ? 'animation-delay-fadeInLeft' : ''}`}
                 >
                   O bem-estar humano <br /> é nossa missão
                 </h2>

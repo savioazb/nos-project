@@ -64,7 +64,7 @@ export default function ManutencaoInstrumentais() {
             </div>
 
             <ul className="flex flex-col justify-center items-center gap-10 md:gap-0">
-              <li className="flex flex-col md:flex-row justify-center items-center gap-5">
+              <li className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-32">
                 <div>
                   <Image src={text1} height={80} alt="" />
                   <p className="max-w-md ml-0 md:ml-4 mt-4">
@@ -77,7 +77,7 @@ export default function ManutencaoInstrumentais() {
                 <Image src={step1} height={300} alt="" />
               </li>
 
-              <li className="flex flex-col-reverse md:flex-row justify-center items-center gap-5">
+              <li className="flex flex-col-reverse md:flex-row justify-center items-center gap-5 md:gap-32">
                 <Image src={step2} height={300} alt="" />
                 <div>
                   <Image src={text2} height={80} alt="" />
@@ -89,7 +89,7 @@ export default function ManutencaoInstrumentais() {
                   </p>
                 </div>
               </li>
-              <li className="flex flex-col md:flex-row justify-center items-center gap-5">
+              <li className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-32">
                 <div>
                   <Image src={text3} height={80} alt="" />
                   <p className="max-w-md ml-0 md:ml-4 mt-4">
@@ -101,7 +101,7 @@ export default function ManutencaoInstrumentais() {
                 </div>
                 <Image src={step3} height={300} alt="" />
               </li>
-              <li className="flex flex-col-reverse md:flex-row justify-center items-center gap-5">
+              <li className="flex flex-col-reverse md:flex-row justify-center items-center gap-5 md:gap-32">
                 <Image src={step4} height={300} alt="" />
                 <div>
                   <Image src={text4} height={80} alt="" />
@@ -113,7 +113,7 @@ export default function ManutencaoInstrumentais() {
                   </p>
                 </div>
               </li>
-              <li className="flex flex-col md:flex-row justify-center items-center gap-5">
+              <li className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-32">
                 <div>
                   <Image src={text5} height={80} alt="" />
                   <p className="max-w-md ml-0 md:ml-4 mt-4">

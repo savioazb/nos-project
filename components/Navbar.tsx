@@ -17,14 +17,14 @@ export const Navbar = () => {
     const changeColor = () => {
       if (window.scrollY >= 10) {
         setScrolled(true);
-        setColor("#ffffff");
-        setMobileColor("#ffffff");
-        setTextColor("#000000");
+        setColor("white");
+        setMobileColor("white");
+        setTextColor("black");
       } else {
         setScrolled(false);
         setColor("transparent");
-        setMobileColor("#000000");
-        setTextColor("#ffffff");
+        setMobileColor("black");
+        setTextColor("white");
       }
     };
     window.addEventListener("scroll", changeColor);
@@ -32,52 +32,47 @@ export const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 top-0 w-full z-10 ease-in duration-300"
+      className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-${color}`}
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-white">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center p-3">
         <Link href="/">
           <img
-            className={
-              scrolled ? "w-[200px] opacity-0" : "w-[200px] opacity-100"
-            }
+            className={`w-[200px] ${scrolled ? 'opacity-0' : 'opacity-100'}`}
             src="/images/logo-menu.svg"
             alt="NOS Logo"
           />
           <img
-            className={
-              scrolled
-                ? "w-[200px] opacity-100 absolute top-[12px] "
-                : "w-[200px] opacity-0 absolute top-[12px]"
+            className={`w-[200px] absolute top-[12px] ${scrolled ? 'opacity-100' : 'opacity-0'}`
+              
             }
             src="/images/logo-menu-black.svg"
             alt="NOS Logo"
           />
         </Link>
-        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
+        <ul className={`hidden sm:flex`}>
           <li className="p-4 uppercase">
             <Link href="/sobreNos">
-              <h3 className="text-sm">Sobre Nós</h3>
+              <h3 className={`text-sm text-${textColor}`}>Sobre Nós</h3>
             </Link>
           </li>
           <li className="p-4 uppercase">
             <Link href="/produtos">
-              <h3 className="text-sm">Produtos</h3>
+              <h3 className={`text-sm text-${textColor}`}>Produtos</h3>
             </Link>
           </li>
           <li className="p-4 uppercase">
             <Link href="/manutencaoInstrumentais">
-              <h3 className="text-sm">Manutenção Instrumental</h3>
+              <h3 className={`text-sm text-${textColor}`}>Manutenção Instrumental</h3>
             </Link>
           </li>
           <li className="p-4 uppercase">
             <Link href="/parceiros">
-              <h3 className="text-sm">Parceiros</h3>
+              <h3 className={`text-sm text-${textColor}`}>Parceiros</h3>
             </Link>
           </li>
           <li className="p-4 uppercase">
             <Link href="/contact">
-              <h3 className="text-sm">Contate-nos</h3>
+              <h3 className={`text-sm text-${textColor}`}>Contate-nos</h3>
             </Link>
           </li>
         </ul>
@@ -85,44 +80,45 @@ export const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={20} className={`text-${textColor}`} />
           ) : (
-            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+            <AiOutlineMenu size={20} className={`text-${textColor}`} />
           )}
         </div>
         {/* Mobile Menu */}
         <div
-          style={{ backgroundColor: `${mobileColor}` }}
-          className={
-            nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300"
-          }
+          className={`sm:hidden absolute top-0 ${nav ? 'left-0' : 'left-[-100%]'} bg-${mobileColor} right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300`}
         >
-          <ul style={{ color: `${textColor}` }}>
+          <ul className={`text-${textColor}`}>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 uppercase"
             >
-              <Link href="/">Home</Link>
+              <Link href="/sobreNos">Sobre Nós</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 uppercase"
             >
-              <Link href="/#gallery">Gallery</Link>
+              <Link href="/produtos">Produtos</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 uppercase"
             >
-              <Link href="/work">Work</Link>
+              <Link href="/manutencaoInstrumentais">Manutenção Instrumental</Link>
             </li>
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500 uppercase"
             >
-              <Link href="/contact">Contact</Link>
+              <Link href="/parceiros">Parceiros</Link>
+            </li>
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-gray-500 uppercase"
+            >
+              <Link href="/contact">Contate-nos</Link>
             </li>
           </ul>
         </div>
